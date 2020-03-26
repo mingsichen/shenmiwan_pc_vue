@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html,
+body {
+    font-family: "Microsoft YaHei", "微软正黑体", "\5b8b\4f53";
+    height: 100%;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.w1260 {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.dis-flex {
+    display: flex;
+}
+
+.dis-ali-center {
+    display: flex;
+    align-items: center;
+}
+
+.dis-jus-center {
+    display: flex;
+    justify-content: center;
+}
+
+.dis-col-jus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dis-ali-space {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dis-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-icons {
+    width: 86px;
+    height: 86px;
+    border-radius: 10px;
+}
+
+.t-o-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-box-orient: vertical;
+}
+
+.btn-all {
+    height: 30px;
+    width: 72px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #2786E6;
+    color: #2786E6;
+}
