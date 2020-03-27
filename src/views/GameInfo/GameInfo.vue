@@ -1,5 +1,5 @@
 !<template>
-  <div class="">
+  <div class="main">
    
     游戏介绍
   </div>
