@@ -1,15 +1,50 @@
-// import Mock from "mockjs"
+//引入mockjs
+const Mock = require('mockjs')
+// 获取 mock.Random 对象
+const Random = Mock.Random;
 
-// //使用mockjs模拟数据
-// Mock.mock('/\/api\/msdk\/proxy\/query_common_credit/', {
-//     "ret":0,
-//     "data":
-//       {
-//         "mtime": "@datetime",//随机生成日期时间
-//         "score|1-800": 800,//随机生成1-800的数字
-//         "rank|1-100":  100,//随机生成1-100的数字
-//         "stars|1-5": 5,//随机生成1-5的数字
-//         "nickname": "@cname",//随机生成中文名字
-//       }
-// //data里的属性看不懂，需要详细看语法规范,博客链接:https://www.jianshu.com/p/4579f40e6108
-// });
+
+const homeData = function () {
+
+    const recomList = [];
+
+
+    for (let i = 0; i < 8; i++) {
+
+        let newsObj = {
+
+            title: Random.ctitle(2, 6),
+
+            gameType: Random.ctitle(2, 3),
+
+            people: Random.integer(1000, 10000)
+
+        }
+
+        recomList.push(newsObj)
+    }
+
+    const recentList = [];
+
+    for (let i = 0; i < 5; i++) {
+
+        let recentObj = {
+
+            title: Random.ctitle(2, 6),
+        }
+        recentList.push(recentObj)
+
+    }
+
+
+    return {
+
+        recomList: recomList,
+
+        recentList: recentList,
+
+    }
+
+}
+
+Mock.mock('/news/api', 'post', homeData)

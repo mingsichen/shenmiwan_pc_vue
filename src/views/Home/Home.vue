@@ -80,7 +80,7 @@
     </div>
 
     <!-- 精品推荐 -->
-     <div class="w1260 fine">
+    <div class="w1260 fine">
       <div class="box-theme dis-ali-space">
         <div class="theme-left dis-ali-center">
           <span class="border-right"></span>
@@ -94,7 +94,25 @@
 
       <div class="fine-game-list">
         <ul>
-          <li class="game-item">
+          <li class="game-item" v-for="(item,index) in recomList" :key="index">
+            <a href class="dis-flex">
+              <div class="pic">
+                <img src="@/assets/images/game.png" alt />
+              </div>
+              <div class="info">
+                <a href class="game-name">{{ item.title }}</a>
+                <p class="game-type">
+                  <span>{{ item.gameType}}</span>&nbsp; | &nbsp;
+                  <span>{{ item.people }}人玩过</span>
+                </p>
+                <div class="game-btn">
+                  <a href class="start-btn">开始游戏</a>
+                  <a href class="get-gift">领取礼包</a>
+                </div>
+              </div>
+            </a>
+          </li>
+          <!--         <li class="game-item">
             <a href class="dis-flex">
               <div class="pic">
                 <img src="@/assets/images/game.png" alt />
@@ -111,133 +129,8 @@
                 </div>
               </div>
             </a>
-          </li>
-          <li class="game-item">
-            <a href class="dis-flex">
-              <div class="pic">
-                <img src="@/assets/images/game.png" alt />
-              </div>
-              <div class="info">
-                <a href class="game-name">乐高无限</a>
-                <p class="game-type">
-                  <span>二次元</span>&nbsp; | &nbsp;
-                  <span>1652人玩过</span>
-                </p>
-                <div class="game-btn">
-                  <a href class="start-btn">开始游戏</a>
-                  <a href class="get-gift">领取礼包</a>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="game-item">
-            <a href class="dis-flex">
-              <div class="pic">
-                <img src="@/assets/images/game.png" alt />
-              </div>
-              <div class="info">
-                <a href class="game-name">乐高无限</a>
-                <p class="game-type">
-                  <span>二次元</span>&nbsp; | &nbsp;
-                  <span>1652人玩过</span>
-                </p>
-                <div class="game-btn">
-                  <a href class="start-btn">开始游戏</a>
-                  <a href class="get-gift">领取礼包</a>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="game-item">
-            <a href class="dis-flex">
-              <div class="pic">
-                <img src="@/assets/images/game.png" alt />
-              </div>
-              <div class="info">
-                <a href class="game-name">乐高无限</a>
-                <p class="game-type">
-                  <span>二次元</span>&nbsp; | &nbsp;
-                  <span>1652人玩过</span>
-                </p>
-                <div class="game-btn">
-                  <a href class="start-btn">开始游戏</a>
-                  <a href class="get-gift">领取礼包</a>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="game-item">
-            <a href class="dis-flex">
-              <div class="pic">
-                <img src="@/assets/images/game.png" alt />
-              </div>
-              <div class="info">
-                <a href class="game-name">乐高无限</a>
-                <p class="game-type">
-                  <span>二次元</span>&nbsp; | &nbsp;
-                  <span>1652人玩过</span>
-                </p>
-                <div class="game-btn">
-                  <a href class="start-btn">开始游戏</a>
-                  <a href class="get-gift">领取礼包</a>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="game-item">
-            <a href class="dis-flex">
-              <div class="pic">
-                <img src="@/assets/images/game.png" alt />
-              </div>
-              <div class="info">
-                <a href class="game-name">乐高无限</a>
-                <p class="game-type">
-                  <span>二次元</span>&nbsp; | &nbsp;
-                  <span>1652人玩过</span>
-                </p>
-                <div class="game-btn">
-                  <a href class="start-btn">开始游戏</a>
-                  <a href class="get-gift">领取礼包</a>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="game-item">
-            <a href class="dis-flex">
-              <div class="pic">
-                <img src="@/assets/images/game.png" alt />
-              </div>
-              <div class="info">
-                <a href class="game-name">乐高无限</a>
-                <p class="game-type">
-                  <span>二次元</span>&nbsp; | &nbsp;
-                  <span>1652人玩过</span>
-                </p>
-                <div class="game-btn">
-                  <a href class="start-btn">开始游戏</a>
-                  <a href class="get-gift">领取礼包</a>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="game-item">
-            <a href class="dis-flex">
-              <div class="pic">
-                <img class src="@/assets/images/game.png" alt />
-              </div>
-              <div class="info">
-                <a href class="game-name">乐高无限</a>
-                <p class="game-type">
-                  <span>二次元</span>&nbsp; | &nbsp;
-                  <span>1652人玩过</span>
-                </p>
-                <div class="game-btn">
-                  <a href class="start-btn">开始游戏</a>
-                  <a href class="get-gift">领取礼包</a>
-                </div>
-              </div>
-            </a>
-          </li>
+          </li> -->
+
         </ul>
       </div>
       <!-- 最近在玩 -->
@@ -734,7 +627,7 @@
         </div>
       </div>
       <div class="red-game-box">
-            <div class="newsGameList">
+        <div class="newsGameList">
           <ul class="dis-wrap">
             <li class="newGame-item dis-flex">
               <a href class="pic">
@@ -871,7 +764,7 @@
                 </div>
               </div>
             </li>
-              <li class="newGame-item dis-flex">
+            <li class="newGame-item dis-flex">
               <a href class="pic">
                 <img class="game-icons" src="@/assets/images/game.png" alt />
               </a>
@@ -886,7 +779,7 @@
                 </div>
               </div>
             </li>
-              <li class="newGame-item dis-flex">
+            <li class="newGame-item dis-flex">
               <a href class="pic">
                 <img class="game-icons" src="@/assets/images/game.png" alt />
               </a>
@@ -901,7 +794,7 @@
                 </div>
               </div>
             </li>
-              <li class="newGame-item dis-flex">
+            <li class="newGame-item dis-flex">
               <a href class="pic">
                 <img class="game-icons" src="@/assets/images/game.png" alt />
               </a>
@@ -922,7 +815,7 @@
     </div>
 
     <!-- 尾部 -->
-    <HomeFooter /> 
+    <HomeFooter />
   </div>
 </template>
 
@@ -930,17 +823,19 @@
 import Header from "@/components/Header/Header.vue";
 import HomeFooter from "@/components/HomeFooter/HomeFooter.vue";
 
-// import { swiper, swiperSlide } from "vue-awesome-swiper";
+
+
 
 export default {
   name: "Home",
   components: {
     Header,
-     HomeFooter
+    HomeFooter
   },
   data() {
     return {
       activeName: "first",
+      recomList: [],
 
       swiperOption: {
         autoplay: false,
@@ -969,18 +864,34 @@ export default {
     };
   },
   mounted() {
-  this.swiper.slideTo(3, 1000, false)
+    this.swiper.slideTo(3, 1000, false)
+    this.$axios.post('/news/api')
+
+      .then((res) => {
+
+        console.log(res)
+        console.log(res.data.recomList)
+        this.recomList = res.data.recomList
+
+      })
+
+      .catch((err) => {
+
+        console.log(err)
+
+      })
 
 
 
     // 引入接口axios
-/*     this.$axios.post("https://api.apiopen.top/videoHomeTab").then(res => {
-      var datares = res.data;
-      console.log(datares);
-    });  */
+    /*  this.$axios.post("https://api.apiopen.top/videoHomeTab").then(res => {
+       var datares = res.data;
+       console.log(datares);
+     });  */
+
   },
   computed: {
-    swiper(){
+    swiper() {
       return this.$refs.mySwiper.$swiper
 
     }
@@ -996,7 +907,7 @@ export default {
 </script>
 
 <style lang="scss" >
- .home {
+.home {
   .swiper-box {
     position: relative;
     .left,
@@ -1569,7 +1480,7 @@ export default {
       }
     }
     .red-game-box {
-         .newsGameList {
+      .newsGameList {
         ul {
           padding-left: 10px;
           .newGame-item {
@@ -1605,5 +1516,5 @@ export default {
       }
     }
   }
-} 
+}
 </style>
